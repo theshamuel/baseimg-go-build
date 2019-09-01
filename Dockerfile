@@ -6,11 +6,11 @@ ENV \
     GOARCH=amd64 \
     CGO_ENABLED=0 \
     GOMETALINTER=3.0.0 \
-    GOLANGCI=1.17.1
+    GOLANGCI=1.17.1 \
+    TZ=UTC
 
 RUN \
     apk add --no-cache --update tzdata git bash curl && \
-    ln -s /usr/share/zoneinfo/Etc/UTC /etc/localtime && \
     rm -rf /var/cache/apk/*
 
 #Install Metalinter and other external deps
