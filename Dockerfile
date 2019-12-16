@@ -1,4 +1,4 @@
-FROM golang:1.12-alpine
+FROM golang:1.13-alpine
 LABEL maintainer="Alex Shamuel<theshamuel@gmail.com>"
 
 ENV \
@@ -6,7 +6,7 @@ ENV \
     GOARCH=amd64 \
     CGO_ENABLED=0 \
     GOMETALINTER=3.0.0 \
-    GOLANGCI=1.17.1 \
+    GOLANGCI=1.21.0 \
     TZ=UTC
 
 RUN \
