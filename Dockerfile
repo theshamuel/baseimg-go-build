@@ -6,7 +6,7 @@ ENV \
     GOARCH=amd64 \
     CGO_ENABLED=0 \
     GOMETALINTER=3.0.0 \
-    GOLANGCI=1.24.0 \
+    GOLANGCI=1.35.2 \
     TZ=UTC
 
 RUN \
