@@ -1,4 +1,4 @@
-FROM golang:1.15-alpine3.13
+FROM golang:1.16-alpine3.13
 LABEL maintainer="Alex Shamuel<theshamuel@gmail.com>"
 
 ENV \
@@ -12,15 +12,6 @@ ENV \
 RUN \
     apk add --no-cache --update tzdata git bash curl && \
     rm -rf /var/cache/apk/*
-
-#Install Metalinter and other external deps
-RUN \
-    go get -u -v github.com/alecthomas/gometalinter && \
-    cd /go/src/github.com/alecthomas/gometalinter && \
-    git checkout v${GOMETALINTER} && \
-    go install github.com/alecthomas/gometalinter && \
-    gometalinter --install && \
-    go get -u -v github.com/stretchr/testify
 
 #Install GolangCI linter
 RUN \
