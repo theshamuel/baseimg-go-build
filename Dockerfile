@@ -1,11 +1,11 @@
-FROM golang:1.16-alpine3.13
+FROM golang:1.17-alpine3.15
 LABEL maintainer="Alex Shamuel<theshamuel@gmail.com>"
 
 ENV \
     GOOS=linux \
     GOARCH=amd64 \
     CGO_ENABLED=0 \
-    GOLANGCI=1.35.2 \
+    GOLANGCI=1.45.2 \
     TZ=UTC
 
 RUN \
@@ -14,5 +14,5 @@ RUN \
 
 #Install GolangCI linter
 RUN \
-    GO111MODULE=on go get github.com/golangci/golangci-lint/cmd/golangci-lint@v${GOLANGCI} && \
+    GO111MODULE=on go install github.com/golangci/golangci-lint/cmd/golangci-lint@v${GOLANGCI} && \
     golangci-lint --version
