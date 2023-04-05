@@ -8,7 +8,7 @@ ENV \
     GOOS=linux \
     GOARCH=amd64 \
     CGO_ENABLED=0 \
-    GOLANGCI=1.51.2 \
+    GOLANGCI=1.52.2 \
     TZ=UTC
 
 RUN \
