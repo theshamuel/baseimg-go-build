@@ -1,4 +1,4 @@
-FROM golang:1.20.1-alpine3.17
+FROM golang:1.23.5-alpine3.21
 
 LABEL maintainer="Alex Shamuel<theshamuel@gmail.com>"
 
@@ -8,7 +8,7 @@ ENV \
     GOOS=linux \
     GOARCH=amd64 \
     CGO_ENABLED=0 \
-    GOLANGCI=1.52.2 \
+    GOLANGCI=1.63.4 \
     TZ=UTC
 
 RUN \
